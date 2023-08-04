@@ -133,17 +133,18 @@ body{
     align-self:center;
 }
 
-#Banner img {
-  display: block;
-  max-width: 115%;
-  height: auto;
-  margin: auto;
-  align-items: left;
+#Banner {
+  position: relative;
 }
 
-
-#Banner{
-    position:relative;
+#Banner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 115%;
+  height: auto;
+  margin-top:190px;
 }
 
 .bannertitle{
@@ -216,12 +217,15 @@ body{
 .sec{
     display: flex; 
     flex-direction: row; 
-    justify-content: space-between; 
+    justify-content: flex-start;
     align-items: baseline; 
 }
 
 .meet{
-    font-weight: 700; font-size: 2.4rem; margin-top: 5vh;
+    font-weight: 700; 
+    font-size: 3rem; 
+    margin-top: 5vh;
+    margin-bottom:2vh;
 }
 
 
@@ -231,41 +235,29 @@ body{
     justify-content:center;
     gap:30px;
   }
-  
-  .explain1{
-    text-align: right;
-    color: var(--main-bl, #737373);
-    font-size: 20px;
-    font-family: Pretendard;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-  }
-  
-
-.picContainer1 {
+  .boxes {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 90px;
-  }
+}
   
-  .explain1 {
+  
+  .explain1 , .explain2 {
+    margin-top:30px;
     position: relative; 
   border-radius: 10px;
   box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.10);
-  width: 322px;
+  width: 500px;
   height: 330px;
-  background-color: #F8F8F8;
-  margin-right:650px;
+  background-color: #fcfcfc;
   }
 
   .explain1>p{
+    padding-top:30px;
     text-align:left;
-    margin-top:33px;
+    margin-top:30px;
     font-size:25px;
-    color:#343a40;
+    color:black;
     margin-left:30px;
     font-family: 'Pretendard';
     font-weight:700;
@@ -275,6 +267,17 @@ body{
     width:300px;
   }
 
+  explain2{
+    margin-top:30px;
+    position: relative; 
+  border-radius: 10px;
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.10);
+  width: 500px;
+  height: 330px;
+  background-color: #fcfcfc;
+  margin-right:650px;
+  }
+
 
 
   .text1{
@@ -282,24 +285,9 @@ body{
     margin-left:10px;
     font-size:19px;
     color:#737373;
-    font-weight:700;
+    
     margin-top:30px;
   }
-  .text2{
-    text-align:left;
-    margin-left:10px;
-    font-size:19px;
-    color:#737373;
-    font-weight:700;
-    margin-top:30px;
-  }
-  .text3{
-    text-align:left;
-    margin-left:10px;
-    font-size:19px;
-    color:#737373;
-    font-weight:700;
-    margin-top:30px;
-  }
+
 
   
