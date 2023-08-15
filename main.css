@@ -16,6 +16,75 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
+/*bubble*/
+
+.bubble {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(247, 231, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: 60%;
+  bottom: 380px;
+  transform: translateX(-50%);
+  animation: bubbleAnimation 1.5s infinite, bubbleDelay 3s infinite; /* 추가된 애니메이션 */
+}
+
+.bubble1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(247, 231, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: 23%;
+  bottom: 500px;
+  transform: translateX(-50%);
+  animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
+}
+
+@keyframes bubbleAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bubbleDelay {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bubble2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(247, 231, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: -5%;
+  bottom: 250px; /* 아래에서 20px 떨어진 위치 */
+  transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
+  animation: bubbleAnimation 2s infinite;
+}
+
+.bubble3 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(247, 231, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: 95%;
+  bottom: 120px; /* 아래에서 20px 떨어진 위치 */
+  transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
+  animation: bubbleAnimation 1.5s infinite, bubbleDelay 2.5s infinite; /* 추가된 애니메이션 */
+}
+
+
 /* header */
 header{
     display:flex;
