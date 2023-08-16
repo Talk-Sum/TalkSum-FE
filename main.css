@@ -8,6 +8,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url('https://webfontworld.github.io/sunn/SUIT.css');
 
 @import url('https://rsms.me/inter/inter.css');
@@ -204,11 +211,24 @@ body{
 
 .sect{
     width:70vw;
-    height:90vh;
+    height:140vh;
     min-width:650px;
     align-self:center;
 }
 
+.sect2{
+  width:100vw;
+    height:100vh;
+    min-width:650px;
+    align-self:center;
+}
+
+.bannersec{
+  width:70vw;
+  height:90vh;
+  min-width:650px;
+  align-self:center;
+}
 #Banner {
   position: relative;
 }
@@ -289,6 +309,14 @@ body{
     
 }
 
+#sec3{
+  background-color:rgba(247, 231, 255, 0.5);
+  align-self:center;
+  padding-top:10vh;
+  padding-bottom:8vh;
+  
+}
+
 
 .sec{
     display: flex; 
@@ -317,6 +345,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
   
   
   .explain1 {
