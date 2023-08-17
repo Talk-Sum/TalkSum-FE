@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .container{
     height: 100vh;
@@ -14,6 +14,9 @@
     justify-content: center;
     background-color: #fff;
     column-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    background-size: 100% 100%;
 }
 .form{
     position: absolute;
@@ -37,11 +40,13 @@
     opacity: 0;
     pointer-events: none;
 }
-p{
-    font-size: 28px;
-    font-weight: 600;
-    color: #232836;
-    text-align: center;
+
+.form-content img{
+    width:10vw;
+    height:6vh;
+    align-items: center;
+    display:flex;
+    margin:0 auto;
 }
 form{
     margin-top: 30px;
@@ -82,7 +87,7 @@ form{
 }
 .field button{
     color: #fff;
-    background-color: #0171d3;
+    background-color: #1e8ffa;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -114,7 +119,6 @@ form{
     background-color: #d4d4d4;
 }
 .line::before{
-    content: 'Or';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -144,17 +148,30 @@ a.facebook .facebook-icon{
     background-color: #fff;
 }
 .facebook-icon,
-img.google-img{
+.google-icon{
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
 }
-img.google-img{
+.google-icon{
     height: 20px;
     width: 20px;
     object-fit: cover;
 }
+
+a.google .google-icon{
+    height: 28px;
+    width: 28px;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
 a.google{
     border: 1px solid #CACACA;
 }
@@ -207,7 +224,7 @@ header > div {
     flex-direction: row;
     gap: 5.5vw;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: #000000;
 
 
@@ -220,7 +237,7 @@ header > div {
     justify-content:center;
     align-items:center;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: #000000;
 
 
@@ -238,9 +255,15 @@ header > div {
     background-color: white; 
     color: #1e8ffa; 
     padding: 10px 20px; 
-    font-size: 1.4vw; 
     cursor: pointer; 
     transition: 0.3s;
     border-radius:8px;
     box-sizing:border-box;
   }
+
+  .nav-line {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;  /* 선의 색상 */
+   
+}
