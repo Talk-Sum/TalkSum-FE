@@ -8,6 +8,7 @@
     font-style: normal;
 }
 
+
 @font-face {
   font-family: 'SUIT-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
@@ -26,25 +27,25 @@ html { font-family: 'Inter', sans-serif; }
 /*bubble*/
 
 .bubble {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 60%;
-  bottom: 380px;
+  left: 85vh;
+  bottom: 60vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 3s infinite; /* 추가된 애니메이션 */
 }
 
 .bubble1 {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 23%;
-  bottom: 500px;
+  left: 41vh;
+  bottom: 73vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
 }
@@ -68,25 +69,25 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 .bubble2 {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: -5%;
-  bottom: 250px; /* 아래에서 20px 떨어진 위치 */
+  left: -5vh;
+  bottom: 30vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 2s infinite;
 }
 
 .bubble3 {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 95%;
-  bottom: 120px; /* 아래에서 20px 떨어진 위치 */
+  left: 137vh;
+  bottom: 10vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2.5s infinite; /* 추가된 애니메이션 */
 }
@@ -110,9 +111,9 @@ header >div>div>div {
 }
 
 #head{
-    padding: 40px 0 40px 0;
+    padding: 30px 0 30px 0;
     font-size:1.5rem;
-    background-color:#2f47ff;
+    background-color:#fff;
 }
 
 header > div {
@@ -126,11 +127,11 @@ header > div {
     display: flex;
     flex-direction: row;
     gap: 5.5vw;
-    font-family: SUIT;
-    font-size: 1.5vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4vw;
     color: #000000;
-    font-style:normal;
-    font-weight:500;
+
+
   }
 
   #navright {
@@ -139,16 +140,30 @@ header > div {
     gap: 30px;
     justify-content:center;
     align-items:center;
-    font-family: SUIT;
-    font-size: 1.5vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4vw;
     color: #000000;
-    font-style:normal;
-    font-weight:500;
+
+
   }
   
   #navleft > div, #navright > div {
     padding: 0 10px;
 
+  }
+
+  .login{
+    text-align:center;
+    width:8vw;
+    border: 1px solid #1e8ffa;
+    background-color: white; 
+    color: #1e8ffa; 
+    padding: 10px 20px; 
+    font-size: 1.4vw; 
+    cursor: pointer; 
+    transition: 0.3s;
+    border-radius:8px;
+    box-sizing:border-box;
   }
 
 /* body */
@@ -176,7 +191,7 @@ body{
 }
 
 #sec1{
-  background-color:#0243ab;
+  background-color:#1e8ffa;
     display:flex;
     flex-direction:column;
    
@@ -249,7 +264,7 @@ body{
     font-weight:700;
     line-height:130%;
     margin-top:8vh;
-    color:black;
+    color:#fff;
     text-align:center;
     font-family: 'Pretendard';
 }
@@ -258,7 +273,7 @@ body{
     font-size:2rem;
     line-height:160%;
     margin-top:3vh;
-    color:#495057;
+    color:#fff;
     text-align:center;
     font-family: 'Pretendard';
 }
@@ -268,7 +283,7 @@ body{
   line-height:160%;
   margin-top:0.2vh;
   text-align:center;
-  color:#495057;
+  color:#fff;
   font-family: 'Pretendard';
 }
 
@@ -281,8 +296,8 @@ body{
   justify-content: center; /* 추가된 속성 */
   width: 18%;
   height: 6vh;
-  background-color: black;
-  color:white;
+  background-color: #fff;
+  color:#1e8ffa;
   margin-top: 5vh;
   margin-bottom: 8vh;
   border-radius: 10px;
@@ -298,7 +313,7 @@ body{
 
 .button-wrapper {
   display: flex;
-  justify-content: space-around; /
+  justify-content: space-around; 
 }
 
 
