@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Responsive Login and Signup Form </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="Login.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+
+        <header>
+            <div id="head">
+                <div>
+                    <img onClick="location.href='main.html'" style="cursor:pointer; position:absolute; width:150px; height:40px; left:150px; top:28px;" src="talksum2.png"></div>
+                    <div id="navleft">
+                        <div>텍스트 변환</div>
+                        <div>요약하기</div>
+                        <div>톡썸 노트</div>
+                      </div>
+                      <div id="navright">
+                        <div class="loginbtn">로그인</div>
+                        <div>마이페이지</div>
+                      </div>                  
+                </div>
+            </div>
+        </header>
+
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <p>로그인</p>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="ID" placeholder="아이디" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="PW" placeholder="비밀번호" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        
+
+                        <div class="field button-field">
+                            <button>로그인</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>아직 계정이 없으신가요?<a href="#" class="link signup-link"> 회원가입하기 </a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="#" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

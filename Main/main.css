@@ -128,7 +128,7 @@ header > div {
     flex-direction: row;
     gap: 5.5vw;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: #000000;
 
 
@@ -141,7 +141,7 @@ header > div {
     justify-content:center;
     align-items:center;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: #000000;
 
 
@@ -159,7 +159,6 @@ header > div {
     background-color: white; 
     color: #1e8ffa; 
     padding: 10px 20px; 
-    font-size: 1.4vw; 
     cursor: pointer; 
     transition: 0.3s;
     border-radius:8px;
@@ -326,7 +325,7 @@ body{
 }
 
 #sec3{
-  background-color:rgba(247, 231, 255, 0.5);
+  background-color:#FAFAFA;
   align-self:center;
   padding-top:10vh;
   padding-bottom:8vh;
