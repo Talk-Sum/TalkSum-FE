@@ -112,7 +112,7 @@ header >div>div>div {
 #head{
     padding: 40px 0 40px 0;
     font-size:1.5rem;
-    background-color:#ffffff;
+    background-color:#2f47ff;
 }
 
 header > div {
@@ -176,9 +176,10 @@ body{
 }
 
 #sec1{
+  background-color:#0243ab;
     display:flex;
     flex-direction:column;
-    background-image:url(purple3.jpeg);
+   
     background-size: 100% 100%;
 }
 
