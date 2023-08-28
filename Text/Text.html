@@ -4,29 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>톡썸 노트</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="Text.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
     
 </head>
-<body>
 
     <body id="body-pd" class="body-pd">
         <div class="l-navbar expander" id="navbar">
             <nav class="nav">
                 <div>
-                    <div class="nav__brand d-flex flex-column align-items-center">
-                        <div class="d-flex justify-content-between w-100">
-                            <p class="name mb-0">이나경</p>
+                    <div class="nav__brand">
+                        <div class="nav__first">
                             <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                        </div>  
-                        <button class="btn btn-primary mt-3">새 노트 만들기</button>                
+                            <a href="#" class="nav__logo">이나경님</a>
+                        </div>              
                     </div>
                     <hr>
+
+                    <a href="#" class="nav__link nav__link--btn" data-bs-toggle="modal" data-bs-target="#newNoteModal">
+                        <ion-icon name="add-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">새 노트 만들기</span>
+                    </a>
+
+                   
+                    <!-- 새 노트 만들기 모달 -->
+<div class="modal fade" id="newNoteModal" tabindex="-1" aria-labelledby="newNoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newNoteModalLabel">새 노트 만들기</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <textarea class="form-control" rows="5" placeholder="여기에 노트를 작성하세요."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-primary">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
                     <div class="nav__list">
                         <a href="#" class="nav__link active">
                             <ion-icon name="home-outline" class="nav__icon"></ion-icon>
@@ -54,6 +79,21 @@
                     </a>
                 </div>
             </nav>
+        </div>
+
+        <div class="main-content container mt-5">
+            <div class="content active" id="content1">
+                전체 노트의 컨텐츠
+            </div>
+            <div class="content" id="content2">
+                중요 노트의 컨텐츠
+            </div>
+            <div class="content" id="content3">
+                요약하기의 컨텐츠
+            </div>
+            <div class="content" id="content4">
+                휴지통의 컨텐츠
+            </div>
         </div>
     
         <!-- IONICONS -->

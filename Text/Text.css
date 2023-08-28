@@ -72,7 +72,7 @@ a {
 
 .nav__brand {
     display: flex;
-    flex-direction: row;  /* 요소들을 가로로 배열 */
+    flex-direction: column;  /* 요소들을 가로로 배열 */
     justify-content: center; /* 가로 방향 중앙 정렬 */
     align-items: center; /* 세로 방향 중앙 정렬 */
 }
@@ -89,10 +89,18 @@ a {
 }
 
 .nav__toggle {
-    margin-left:auto;
     font-size: 1.25rem;
     padding: .75rem;
     cursor: pointer;
+    margin-left: 0; /* 왼쪽 마진 제거 */
+}
+
+.nav__first{
+    display: flex;
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    justify-content: flex-start; /* 좌우 요소 간격 최대화 */
+    width: 100%;
+    gap:2rem;
 }
 
 .name{
@@ -102,6 +110,7 @@ a {
 .nav__logo {
     color: var(--white-color);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .nav__link {
@@ -126,6 +135,8 @@ a {
 }
 
 .nav_name {
+    white-space: nowrap;    /* 줄바꿈 방지 */
+    max-width: 60px; 
     font-size: var(--small-font-size);
 }
 
@@ -181,3 +192,35 @@ a {
 .logo{
     width:7vw;
 }
+
+/* 컨텐츠 메뉴 */
+/* 기본적으로 모든 컨텐츠를 숨김 */
+.content {
+    display: none;
+}
+
+/* 활성화된 컨텐츠만 표시 */
+.content.active {
+    display: block;
+}
+
+.nav__link--btn {
+    background-color: #1e8ffa;  /* Bootstrap Primary Color */
+    color:  white; 
+    border-radius: .5rem;
+    padding: .5rem .75rem;
+    text-align: left;
+    transition: background-color .3s ease;
+    border: 0.1rem solid #1e8ffa;
+    display: flex;              /* 아이콘과 텍스트 중앙 정렬을 위해 flex 사용 */
+    justify-content: left;
+    align-items: center;
+}
+
+.nav__link--btn:hover {
+    background-color: #0072ff; /* Bootstrap Primary Hover Color */
+    color: white;
+    text-decoration: none;     /* hover 상태에서 밑줄 제거 */
+}
+
+
