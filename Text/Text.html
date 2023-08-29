@@ -26,31 +26,23 @@
                     </div>
                     <hr>
 
-                    <a href="#" class="nav__link nav__link--btn" data-bs-toggle="modal" data-bs-target="#newNoteModal">
-                        <ion-icon name="add-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">새 노트 만들기</span>
-                    </a>
+                    <div class="modal">
+                        <div class="modal_body">
+                            <h5 class="modal-title">새 노트 만들기</h5>
+                            <button class="btn-close-modal">닫기</button>
+                            <textarea class="form-control" rows="5" placeholder="여기에 노트를 작성하세요."></textarea>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary btn-close-modal">닫기</button>
+                                <button type="button" class="btn btn-primary">저장</button>
+                            </div>
+                        </div>
+                    </div>
 
-                   
-                    <!-- 새 노트 만들기 모달 -->
-<div class="modal fade" id="newNoteModal" tabindex="-1" aria-labelledby="newNoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="newNoteModalLabel">새 노트 만들기</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <textarea class="form-control" rows="5" placeholder="여기에 노트를 작성하세요."></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-          <button type="button" class="btn btn-primary">저장</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+                    <button class="btn-open-popup">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        새 노트 만들기
+                    </button>
+                    
 
                     <div class="nav__list">
                         <a href="#" class="nav__link active">
