@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* VARIABLES CSS */
 :root {
@@ -22,6 +25,10 @@
 /* BASE */
 *, ::before, ::after {
     box-sizing: border-box;
+}
+
+*{
+    font-family: 'Pretendard';
 }
 
 body {
@@ -223,7 +230,15 @@ a {
     text-decoration: none;     /* hover 상태에서 밑줄 제거 */
 }
 
+.btn-open-popup, .nav__link {
+    width: 14vw;
+}
+
 /* 모달 */
+.selected-language{
+    color:#1e8ffa;
+    cursor:pointer;
+}
 .modal {
     display: none;
     position: fixed;
@@ -235,34 +250,251 @@ a {
 }
 
 .modal_body {
+    padding-left: 0;
     background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    width: 50%;
-    position: relative;
+    position: fixed; /* 위치를 fixed로 변경 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 화면 중앙에 위치시키기 위해 translate 사용 */
+    padding: 1.5rem;
+    width: 42vw;
+    height:36vw;
+    border-radius: 2rem;
+}
+
+.btn-primary {
+    position: fixed;
+    bottom: 5%;  /* 버튼을 뷰포트 하단에서 20px 위에 위치시킵니다. */
+    right: 45%;   /* 버튼을 뷰포트 오른쪽에서 20px 왼쪽에 위치시킵니다. */
 }
 
 .btn-close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 17px;
+    right: 20px;
     cursor: pointer;
+    border:none;
+    background: transparent; /* 배경색도 없애줌 */
+    color:black;
 }
 
+.modal .modal-title {
+    border-bottom: none;
+    text-decoration:none;
+}
+
+.modal-footer {
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+.upload-box,
+.file-label {
+    align-self: center; /* 왼쪽 정렬 */
+
+}
+
+.file-label {
+    background-color: #1e8ffa;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 25.5%;
+    height:16%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .file {
+    display: none;
+  }
+
+  .upload-box {
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    height: 100%;
+    flex-direction: column;
+  }
+  .upload-box .drag-file {
+    margin-top:0.5rem;
+    width: 38vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.5rem;
+    border: 0.2rem dashed #dbdbdb;
+  }
+  .upload-box .drag-file.highlight {
+    border: 3px dashed red;
+  }
+  .upload-box .drag-file .image {
+    width: 40px;
+  }
+
+  .upload-box .drag-file .image2 {
+    width: 1rem;
+  } 
+  .upload-box .drag-file .message {
+    text-align:center;
+    margin-bottom: 0;
+    font-size:0.9rem;
+    margin-top:0.3rem;
+  }
+
+  .upload{
+    margin-top:1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .upload-box .drag-file .message2{
+    margin-top:0.5rem;
+    font-size:0.9rem;
+    margin-bottom:1rem;
+  }
+
+  .files {
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    overflow: auto;
+    height: 360px;
+  }
+  .files .file {
+    display: flex;
+    padding: 20px 20px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  .files .file:last-child {
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
+  .files .file .thumbnail {
+    display: flex;
+    flex: none;
+    width: 50px;
+    margin-right: 20px;
+    align-items: center;
+  }
+  .files .file .thumbnail .image {
+    width: 100%;
+  }
+  .files .file .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .files .file .details .header {
+    display: flex;
+  }
+  .files .file .details .header .name {
+    width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .files .file .details .header .size {
+    margin-left: auto;
+  }
+  .files .file .progress {
+    position: relative;
+    height: 6px;
+    background-color: #dbdbdb;
+    overflow: hidden;
+    margin-top: 4px;
+    border-radius: 10px;
+  }
+  .files .file .progress .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5b975b;
+  }
+  .files .file .status {
+    display: flex;
+    width: 100%;
+  }
+  .files .file .status .speed {
+    margin-left: auto;
+  }
+
 .btn-open-popup {
-    display: flex;            /* Flexbox 사용 */
-    justify-content: flex-start; /* 시작점(왼쪽)을 기준으로 아이템 정렬 */
-    align-items: center;      /* 아이템들을 세로 방향 중앙에 배치 */
-    padding: .8rem;          /* nav__link와 동일한 패딩 값 사용 */
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 0.75rem;
+    padding: 0.75rem;
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+    border: 0.1rem solid #1e8ffa;
     color: white;
     background-color: #1e8ffa;
-    border-radius: .5rem;
-    border: 0.1rem solid #1e8ffa;
-    white-space: nowrap;
-    margin-bottom: 1rem;
-    transition: background-color .3s ease, color .3s ease;
-    cursor: pointer;
-    gap: 0.75rem;             /* 아이콘과 텍스트 사이의 간격 조정 */
+}
+
+/* 링크로 입력하기 */
+
+.inputlink {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:1.5rem;
+}
+
+
+.import {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+
+
+.input-text:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.link-upload-container {
+    display: flex;           /* Flexbox를 사용하여 자식 요소들을 가로로 배열 */
+    align-items: center;     /* 자식 요소들을 세로로 중앙 정렬 */
+    gap: 10px;               /* 입력 폼과 버튼 사이의 간격 설정 */
+}
+
+.input-text {
+    flex-grow: 1;            
+    padding: 10px;           
+    border: 1px solid #ccc;  
+    border-radius: 4px;     
+    width:31vw; 
+}
+
+.upload-btn {
+    padding: 10px 15px;      /* 버튼 내부의 패딩 설정 */
+    border: none;            /* 기본 테두리 제거 */
+    background-color: #007BFF; /* 버튼 배경색 설정 */
+    color: #fff;             /* 버튼 텍스트 색상 설정 */
+    border-radius: 4px;      /* 테두리 둥근 모서리 설정 */
+    cursor: pointer;         /* 마우스 커서를 포인터 모양으로 변경 */
+    transition: background-color 0.3s;  /* 배경색 변경 시 애니메이션 효과 적용 */
+}
+
+.upload-btn:hover {
+    background-color: #0056b3; /* 마우스 오버 시 버튼 배경색 변경 */
 }
 
 

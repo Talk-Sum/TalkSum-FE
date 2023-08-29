@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>톡썸 노트</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -29,18 +30,70 @@
                     <div class="modal">
                         <div class="modal_body">
                             <h5 class="modal-title">새 노트 만들기</h5>
-                            <button class="btn-close-modal">닫기</button>
-                            <textarea class="form-control" rows="5" placeholder="여기에 노트를 작성하세요."></textarea>
+                            
                             <div class="modal-footer">
-                                <button class="btn btn-secondary btn-close-modal">닫기</button>
-                                <button type="button" class="btn btn-primary">저장</button>
+                                <div class="upload">파일 업로드하기</div>
+                                <div class="upload-box">
+                                    <div id="drop-file" class="drag-file">
+                                      <img src="https://img.icons8.com/ios/50/upload-to-cloud--v1.png" alt="파일 아이콘" class="image">
+                                      <p class="message">내 PC에서 음성파일을 첨부하거나 끌어오세요.<br>
+                                        음성파일 길이는 한 번에 최대 180분까지 가능해요.</p>
+                                        <div class="message2">
+                                            <img src="https://img.icons8.com/ios/50/globe--v1.png" alt="파일 아이콘" class="image2">
+                                            <span class="selected-language">한국어
+                                                <img src="https://img.icons8.com/color/48/expand-arrow--v1.png" alt="파일 아이콘" class="image2">
+                                            </span>
+                                            <ul class="dropdown-menu">
+                                                <li data-lang="한국어">한국어</li>
+                                                <li data-lang="영어">영어</li>
+                                                <li data-lang="스페인어">스페인어</li>
+                                            </ul>
+                                        </div>
+
+                                      <label class="file-label" for="chooseFile">파일 첨부하기</label>
+                                    </div>
+                                  </div>
+
+                                <!-- <input class="file" id="chooseFile" type="file" multiple>
+                                <div id="files" class="files">
+                                    <div class="file">
+                                      <div class="thumbnail">
+                                        <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일타입 이미지" class="image">
+                                      </div>
+                                      <div class="details">
+                                        <header class="header">
+                                          <span class="name">Photo.png</span>
+                                          <span class="size">7.5 mb</span>
+                                        </header>
+                                        <div class="progress">
+                                          <div class="bar"></div>
+                                        </div>
+                                        <div class="status">
+                                          <span class="percent">37% done</span>
+                                          <span class="speed">90KB/sec</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> -->
+
+                                  <div class="inputlink">
+                                  <div class="import">링크로 가져오기</div>
+
+                                  <div class="link-upload-container">
+                                    <input type="text" class="input-text" placeholder="링크 URL을 여기에 입력하세요.">
+                                    <button class="upload-btn">Upload</button>
+                                </div>
+
+                                </div>
+
+                                <button class="btn btn-secondary btn-close-modal">X</button>
                             </div>
                         </div>
                     </div>
 
                     <button class="btn-open-popup">
-                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
-                        새 노트 만들기
+                        <ion-icon name="add-outline" class="nav__icon"></ion-icon>
+                        <span class="new_note">새 노트 만들기</span>
                     </button>
                     
 
