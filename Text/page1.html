@@ -39,7 +39,7 @@
             border-radius: 0.5rem;
             background: #ffffff;
             box-shadow: 3px 4px 22px 0px rgba(0, 0, 0, 0.10);
-            padding: 1rem;
+            padding:0;
         }
 
         .right-content {
@@ -55,6 +55,13 @@
         /* 텍스트 스타일 */
         .content-text {
             font-weight: bold;
+            font-size:1.1rem;
+            margin-top:0.5rem;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        hr{
+            margin-top:0.5rem;
         }
 
         /* 음성기록 텍스트 스타일 */
@@ -71,6 +78,61 @@
             display:flex;
             flex-direction:row;
             justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            padding-left:1rem;
+            padding-top:0.5rem;
+            padding-right:0.5rem;
+        }
+
+        .leftheader2{
+            display:flex;
+            flex-direction:row;
+            justify-content: flex-start;
+            text-align: center;
+            align-items: center;
+            padding-left:1rem;
+            padding-right:0.5rem;
+        }
+        
+        .content-keyword{
+            font-weight: bold;
+            font-size:1.1rem;
+            font-family:'Courier New', Courier, monospace;
+            margin-right:3rem;
+        }
+        .image {
+            margin-left: 0.5rem;
+        }
+
+        .keywordtag{
+            font-size:0.9rem;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        .icon{
+            width:1.3vw;
+            margin-right:0.5vw;
+        }
+
+        .chat{
+            display:flex;
+            flex-direction: column;
+            margin-left:1vw;
+        }
+
+        .userimage{
+            margin-right:1vw;
+        }
+
+        .time{
+            margin-left:1vw;
+            color:grey;
+        }
+
+        .record{
+            display:flex;
+            flex-direction:row;
         }
     </style>
 </head>
@@ -80,14 +142,35 @@
     <div class="column">
         <div class="left-content">
             <div class="leftheader">
-            <div class="content-text">음성 기록</div>
-            <img src="https://img.icons8.com/ios/50/save--v1.png" alt="저장 아이콘" class="image">
-            
+                <div class="content-text">음성 기록</div>
+                <div class="image">
+                <img src="https://img.icons8.com/ios/50/save--v1.png" alt="저장 아이콘" class="icon">
+                <img src="https://img.icons8.com/fluency-systems-filled/48/search.png" alt="마이크 아이콘" class="icon">
+            </div>
+            </div>
+            <hr>
+
+            <div class="leftheader2">
+            <div class="content-keyword">키워드</div>
+            <div class="keywordtag">#운영체제&nbsp;&nbsp;#가상 메모리&nbsp;&nbsp;#페이징&nbsp;&nbsp;#세그먼트 테이블&nbsp;&nbsp;#페이지 테이블&nbsp;&nbsp;#코드 세그먼트</div>
         </div>
-            <!-- 좌측 컬럼 내용 -->
+
+            <hr>
+            <div class="chat">
+            <img src="chicken.png" style="width:2.3vw;" alt="닭 이미지" class="userimage">
+            <div class="record">
+            <div class="username">참석자 1</div>
+            <div class="time">05:59</div>
+            </div>
+            <div class="recordcontent">
+                그런 연속적이지 않은 각각의 부분들을 연속적으로 접근할 수 있는 것처럼 해줄 수 있는 페치 테이블에 도움이 필요한 것이고 이 페이시 테이블의 도움은 매지터에 저장할 수 없을 만큼 덩어리가 크기 때문에 메모리에 절단을 이르게 되고 따라서 내가 어떤 특정 번지 0 번지를 작성한다라고 했을 때,
+            </div>
+            </div>
+
         </div>
         <div class="right-content">
             <div class="content-text">요약하기</div>
+            </div>
             <!-- 우측 컬럼 내용 -->
         </div>
     </div>
