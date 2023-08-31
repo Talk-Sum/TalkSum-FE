@@ -16,6 +16,20 @@
 </head>
 
     <body id="body-pd" class="body-pd">
+
+        <div class="container">
+            <div id="divSearch">
+                <input placeholder="노트 이름을 검색하세요.">
+                <img src="https://img.icons8.com/ios/50/search--v1.png" alt="파일 아이콘" class="image">
+            </div>
+            <button class="btn-open-popup">
+                <ion-icon name="add-outline" class="nav__icon"></ion-icon>
+                <span class="new_note">새 노트 만들기</span>
+            </button>
+        </div>
+
+       
+
         <div class="l-navbar expander" id="navbar">
             <nav class="nav">
                 <div>
@@ -40,7 +54,7 @@
                                         음성파일 길이는 한 번에 최대 180분까지 가능해요.</p>
                                         <div class="message2">
                                             <img src="https://img.icons8.com/ios/50/globe--v1.png" alt="파일 아이콘" class="image2">
-                                            <span class="selected-language">한국어
+                                            인식 언어&nbsp;<span class="selected-language">한국어
                                                 <img src="https://img.icons8.com/color/48/expand-arrow--v1.png" alt="파일 아이콘" class="image2">
                                             </span>
                                             <ul class="dropdown-menu">
@@ -54,8 +68,8 @@
                                     </div>
                                   </div>
 
-                                <!-- <input class="file" id="chooseFile" type="file" multiple>
-                                <div id="files" class="files">
+                                <input class="file" id="chooseFile" type="file" multiple>
+                                <!-- <div id="files" class="files">
                                     <div class="file">
                                       <div class="thumbnail">
                                         <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일타입 이미지" class="image">
@@ -74,13 +88,13 @@
                                         </div>
                                       </div>
                                     </div>
-                                  </div> -->
+                                  </div> --> 
 
                                   <div class="inputlink">
                                   <div class="import">링크로 가져오기</div>
 
                                   <div class="link-upload-container">
-                                    <input type="text" class="input-text" placeholder="링크 URL을 여기에 입력하세요.">
+                                    <input type="text" class="input-text" placeholder="유튜브 링크 URL을 여기에 입력하세요.">
                                     <button class="upload-btn">Upload</button>
                                 </div>
 
@@ -91,10 +105,7 @@
                         </div>
                     </div>
 
-                    <button class="btn-open-popup">
-                        <ion-icon name="add-outline" class="nav__icon"></ion-icon>
-                        <span class="new_note">새 노트 만들기</span>
-                    </button>
+                    
                     
 
                     <div class="nav__list">
@@ -118,25 +129,21 @@
                             <span class="nav_name">휴지통</span>
                         </a>
                     </div>
-                    <a href="#" class="nav__link">
-                        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">로그아웃</span>
-                    </a>
                 </div>
             </nav>
         </div>
 
-        <div class="main-content container mt-5">
-            <div class="content active" id="content1">
-                전체 노트의 컨텐츠
+        <div class="contents">
+            <div class="content active" id="content0">
+                <div include-html="All.html"></div>
+            </div>
+            <div class="content" id="content1">
+                <div include-html="Important.html"></div>
             </div>
             <div class="content" id="content2">
-                중요 노트의 컨텐츠
-            </div>
-            <div class="content" id="content3">
                 요약하기의 컨텐츠
             </div>
-            <div class="content" id="content4">
+            <div class="content" id="content3">
                 휴지통의 컨텐츠
             </div>
         </div>

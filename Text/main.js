@@ -40,26 +40,28 @@ for(i=0;i<linkCollapse.length;i++) {
 
 /*컨텐츠 메뉴*/
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav__link');
-    const contents = document.querySelectorAll('.content');
+  const navLinks = document.querySelectorAll('.nav__link');
+  const contents = document.querySelectorAll('.content');
 
-    navLinks.forEach((link, index) => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+  navLinks.forEach((link, index) => {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
 
-            // 모든 컨텐츠와 메뉴의 활성화 상태를 제거
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
+          // 모든 컨텐츠와 메뉴의 활성화 상태를 제거
+          contents.forEach(content => {
+              content.classList.remove('active');
+          });
+          navLinks.forEach(link => {
+              link.classList.remove('active');
+          });
 
-            // 클릭한 메뉴에 해당하는 컨텐츠와 메뉴 활성화
-            contents[index].classList.add('active');
-            this.classList.add('active');
-        });
-    });
+          // 클릭한 메뉴에 해당하는 컨텐츠와 메뉴 활성화
+          if (index < contents.length) {
+              contents[index].classList.add('active');
+              this.classList.add('active');
+          }
+      });
+  });
 });
 
 // 노트만들기 버튼 숨기기
@@ -215,3 +217,30 @@ $('.dropdown-menu li').click(function() {
     $('.selected-language').text(selectedLang);
     $('.dropdown-menu').hide();
 });
+
+// html 불러오기
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('[include-html]');
+
+  elements.forEach(element => {
+      const filePath = element.getAttribute('include-html');
+
+      fetch(filePath).then(response => {
+          return response.text();
+      }).then(data => {
+          element.innerHTML = data;
+      }).catch(error => {
+          console.warn('Error fetching the include file.');
+      });
+  });
+});
+
+
+function goToPage(pageURL) {
+  window.location.href = pageURL;
+}
+
+
+
+
+

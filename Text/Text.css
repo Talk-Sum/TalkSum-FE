@@ -34,7 +34,7 @@
 body {
     position: relative;
     margin: 0;
-    padding: 2rem 0 0 6.75rem;
+    padding: 0rem 0 0 6.75rem;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     transition: .5s;
@@ -106,7 +106,8 @@ a {
     display: flex;
     align-items: center; /* 세로 방향 중앙 정렬 */
     justify-content: flex-start; /* 좌우 요소 간격 최대화 */
-    width: 100%;
+    width: 20vw;
+    height:5vh;
     gap:2rem;
 }
 
@@ -154,7 +155,7 @@ a {
 
 /* Add padding body*/
 .body-pd {
-    padding: 2rem 0 0 16rem;
+    padding: 0rem 0 0 15rem;
 }
 
 /* Active links menu */
@@ -200,9 +201,60 @@ a {
     width:7vw;
 }
 
+/* header */
+.container {
+    height:6vh;
+    width:84vw;
+    margin-top:1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divSearch {
+    display: flex;
+    width: 20vw;
+    align-self: left;
+    justify-content: left;
+    align-items: center; /* 세로 중앙 정렬 */
+    position: relative; 
+}
+
+#divSearch > input {
+    width: 30vw;
+    height: 6vh;
+    border: 5px solid #fafbfc;
+    background: #fafbfc;
+    border-radius: 0.5rem;
+    padding: 0 0 0 1vw;
+    font-size: 1.4rem;
+    line-height: 6vh; 
+    justify-content: center;
+    outline: none;
+    font-size:1rem;
+}
+
+#divSearch > input::placeholder {
+    font-size: 1rem;
+}
+
+
+#divSearch > img{
+    position: absolute;
+    width: 24px;
+    left:17.5vw;
+}
+
+
+
+
+
+
 /* 컨텐츠 메뉴 */
 /* 기본적으로 모든 컨텐츠를 숨김 */
 .content {
+    background: white;
+    border:none;
+    outline:none;
     display: none;
 }
 
@@ -230,9 +282,7 @@ a {
     text-decoration: none;     /* hover 상태에서 밑줄 제거 */
 }
 
-.btn-open-popup, .nav__link {
-    width: 14vw;
-}
+
 
 /* 모달 */
 .selected-language{
@@ -278,10 +328,21 @@ a {
     color:black;
 }
 
+.btn-close-modal:hover {
+    background-color:white;
+   color:black;
+
+}
+
+
 .modal .modal-title {
     border-bottom: none;
     text-decoration:none;
+    margin-left:0.2rem;
+    margin-bottom: 0.2rem;
 }
+
+
 
 .modal-footer {
     padding:0;
@@ -431,10 +492,15 @@ a {
   }
 
 .btn-open-popup {
+    width:10vw;
+    height:6vh;
+    text-align: center;
+    justify-content: center;
+    line-height:1vh;
     display: grid;
     grid-template-columns: max-content max-content;
     align-items: center;
-    column-gap: 0.75rem;
+    column-gap: 0.4rem;
     padding: 0.75rem;
     color: var(--white-color);
     border-radius: 0.5rem;
@@ -451,7 +517,7 @@ a {
 .inputlink {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
     margin-top:1.5rem;
 }
 
@@ -473,18 +539,18 @@ a {
     display: flex;           /* Flexbox를 사용하여 자식 요소들을 가로로 배열 */
     align-items: center;     /* 자식 요소들을 세로로 중앙 정렬 */
     gap: 10px;               /* 입력 폼과 버튼 사이의 간격 설정 */
+    width:38.2vw;
 }
 
 .input-text {
     flex-grow: 1;            
-    padding: 10px;           
+    padding: 0.6rem;           
     border: 1px solid #ccc;  
     border-radius: 4px;     
-    width:31vw; 
 }
 
 .upload-btn {
-    padding: 10px 15px;      /* 버튼 내부의 패딩 설정 */
+    padding: 0.6rem;      /* 버튼 내부의 패딩 설정 */
     border: none;            /* 기본 테두리 제거 */
     background-color: #007BFF; /* 버튼 배경색 설정 */
     color: #fff;             /* 버튼 텍스트 색상 설정 */
@@ -496,6 +562,16 @@ a {
 .upload-btn:hover {
     background-color: #0056b3; /* 마우스 오버 시 버튼 배경색 변경 */
 }
+
+/* 전체 노트 */
+
+.contents{
+    padding-top:0.3rem;
+    padding-left:1rem;
+    width: 82.5vw;
+    margin-top:1.4rem;
+}
+
 
 
 
