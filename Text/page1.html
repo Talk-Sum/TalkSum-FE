@@ -73,6 +73,12 @@
         .right-content .content-text {
             color: black;
         }
+        
+        .chat-container {
+        flex: 1; /* 컨테이너가 남은 공간을 차지하도록 설정 */
+        overflow-y: auto; /* 세로 스크롤이 필요한 경우에만 스크롤 바 표시 */
+        padding: 1rem 2rem; /* 스크롤 내용과 컨테이너 사이의 간격 설정 */
+    }
 
         .leftheader{
             display:flex;
@@ -116,9 +122,11 @@
         }
 
         .chat{
+            margin-top:2vw;
             display:flex;
-            flex-direction: column;
-            margin-left:1vw;
+            flex-direction: row;
+            margin-left:2vw;
+            margin-right:2vw;
         }
 
         .userimage{
@@ -134,6 +142,11 @@
             display:flex;
             flex-direction:row;
         }
+        
+        .records{
+            display:flex;
+            flex-direction:column;
+        }
     </style>
 </head>
 <body id="body-pd" class="body-pd">
@@ -141,6 +154,7 @@
 <div class="split-screen">
     <div class="column">
         <div class="left-content">
+            <div class="chat-container">
             <div class="leftheader">
                 <div class="content-text">음성 기록</div>
                 <div class="image">
@@ -152,12 +166,13 @@
 
             <div class="leftheader2">
             <div class="content-keyword">키워드</div>
-            <div class="keywordtag">#운영체제&nbsp;&nbsp;#가상 메모리&nbsp;&nbsp;#페이징&nbsp;&nbsp;#세그먼트 테이블&nbsp;&nbsp;#페이지 테이블&nbsp;&nbsp;#코드 세그먼트</div>
+            <div class="keywordtag">#운영체제&nbsp;&nbsp;#가상 메모리&nbsp;&nbsp;#페이징&nbsp;&nbsp;#세그먼트 테이블&nbsp;&nbsp;#페이지 테이블</div>
         </div>
 
             <hr>
             <div class="chat">
-            <img src="chicken.png" style="width:2.3vw;" alt="닭 이미지" class="userimage">
+            <img src="chicken.png" style="width:3vw; height:3vw"  alt="닭 이미지" class="userimage">
+            <div class="records">
             <div class="record">
             <div class="username">참석자 1</div>
             <div class="time">05:59</div>
@@ -165,9 +180,43 @@
             <div class="recordcontent">
                 그런 연속적이지 않은 각각의 부분들을 연속적으로 접근할 수 있는 것처럼 해줄 수 있는 페치 테이블에 도움이 필요한 것이고 이 페이시 테이블의 도움은 매지터에 저장할 수 없을 만큼 덩어리가 크기 때문에 메모리에 절단을 이르게 되고 따라서 내가 어떤 특정 번지 0 번지를 작성한다라고 했을 때,
             </div>
+        </div>
             </div>
 
+            
+            <div class="chat">
+            <img src="chicken.png" style="width:3vw; height:3vw"  alt="닭 이미지" class="userimage">
+            <div class="records">
+            <div class="record">
+            <div class="username">참석자 1</div>
+            <div class="time">05:59</div>
+            </div>
+            <div class="recordcontent">
+                그 연번지가 실제 메모리 어디에 있는지를 접근하기 위해서 페이지 테이블을 통해 프레임 번호를 얻고, 그 얻은 프레인 번호를 통해서 페이지를 다시 프레임을 다시 접근해 줘야 돼서 효율성이 상대적으로 떨어지더라라는 거예요. 
+그래서 그렇게 상대적으로 떨어지는 효율성들을 조금 더 효과적으로 처리하기 트레이라는 캐시 메모리의 도움을 받아볼 수 있다라는 거죠. 
+일종의 하드웨어 캐시로서 고속의
+            </div>
         </div>
+            </div>
+
+            
+            <div class="chat">
+            <img src="chicken.png" style="width:3vw; height:3vw"  alt="닭 이미지" class="userimage">
+            <div class="records">
+            <div class="record">
+            <div class="username">참석자 1</div>
+            <div class="time">05:59</div>
+            </div>
+            <div class="recordcontent">
+                우리 캐시 메모리라는 것이 보면 일반 메인 메모리처럼 캐시 메모리 안에 들어있는 데이터들이 존재하는지를 순차적으로 비교해 나간다라고 했다라고 하면 효율성이 좀 떨어지잖아요. 
+                여기 있나 여기 있나 여기있나 이렇게 순차적으로 쭉 검색이 태어나다라고 하면 시간이 많이 소요되어지기 때문에 순차적인 검색이 아니라 하드웨어적으로 현재 캐시 메모리에 저장되어 있는 모든 요소를 한 번에 비교해서 있다 없다
+            </div>
+        </div>
+            </div>
+        </div>
+        </div>
+
+
         <div class="right-content">
             <div class="content-text">요약하기</div>
             </div>
