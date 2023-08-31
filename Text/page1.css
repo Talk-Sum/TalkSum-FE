@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* VARIABLES CSS */
+:root {
+    --nav--width: 92px;
+
+    /* Colores */
+    --first-color: #f2f2f2;
+    --bg-color: #Fafbfc;
+    --sub-color: #b6cefc;
+    --white-color: #495057;
+
+    /* Fuente y tipografia */
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+
+    /* z index */
+    --z-fixed: 100;
+}
+
+/* BASE */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+*{
+    font-family: 'Pretendard';
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0rem 0 0 6.75rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* l NAV */
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav--width);
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+/* NAV */
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav__brand {
+    display: flex;
+    flex-direction: column;  /* 요소들을 가로로 배열 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+}
+
+
+
+.centered-content {
+    margin-left:3rem;
+    margin-top:1rem;
+    flex: 1; /* 이 부분이 중요합니다. 이렇게 하면 centered-content가 가능한 한의 공간을 차지하게 됩니다. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+    margin-left: 0; /* 왼쪽 마진 제거 */
+}
+
+.nav__first{
+    display: flex;
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    justify-content: flex-start; /* 좌우 요소 간격 최대화 */
+    width: 20vw;
+    height:5vh;
+    gap:2rem;
+}
+
+.name{
+    text-align:center;
+}
+
+.nav__logo {
+    color: var(--white-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav__link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    background-color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.25rem;
+}
+
+.nav_name {
+    white-space: nowrap;    /* 줄바꿈 방지 */
+    max-width: 60px; 
+    font-size: var(--small-font-size);
+}
+
+/* Expander menu */
+.expander {
+    width: calc(var(--nav--width) + 9.25rem);
+}
+
+/* Add padding body*/
+.body-pd {
+    padding: 0rem 0 0 15rem;
+}
+
+/* Active links menu */
+.active {
+    background-color: var(--first-color);
+}
+
+/* COLLAPSE */
+.collapse {
+    grid-template-columns: 20px max-content 1fr;
+}
+
+.collapse__link {
+    justify-self: flex-end;
+    transition: .5;
+}
+
+.collapse__menu {
+    padding: .75rem 2.25rem;
+}
+
+.collapse__sublink {
+    color: var(--sub-color);
+    font-size: var(--small-font-size);
+}
+
+.collapse__sublink:hover {
+    color: var(--white-color);
+}
+
+

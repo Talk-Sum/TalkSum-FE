@@ -202,12 +202,17 @@ a {
 }
 
 /* header */
-.container {
+.containers {
     height:6vh;
-    width:84vw;
+    width: 100%; 
     margin-top:1rem;
+    padding-left:1.7rem;
+    padding-right:1.4rem;
+    margin: 1rem 0px !important;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: start;
 }
 
 #divSearch {
@@ -565,10 +570,11 @@ a {
 
 /* 전체 노트 */
 
-.contents{
+.contentsnote{
     padding-top:0.3rem;
-    padding-left:1rem;
-    width: 82.5vw;
+    padding-left:1.7rem;
+    width: 100%;
+    padding-right:1.7rem;
     margin-top:1.4rem;
 }
 
