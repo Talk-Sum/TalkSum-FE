@@ -145,7 +145,8 @@ header > div {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    justify-content:center;
+    margin-right:10vw;
+    justify-content:right;
     align-items:center;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.2vw;
