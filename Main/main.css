@@ -45,7 +45,7 @@ html { font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   position: absolute;
   left: 41vh;
-  bottom: 73vh;
+  bottom: 60vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
 }
@@ -173,6 +173,19 @@ header > div {
     box-sizing:border-box;
   }
 
+  .Signupbtn{
+    text-align:center;
+    width:8vw;
+    border: 1px solid #c7cdd3;
+    background-color: white; 
+    color: #303348; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: 0.3s;
+    border-radius:8px;
+    box-sizing:border-box;
+  }
+
 /* body */
 
 html{
@@ -185,6 +198,7 @@ div,p,input{
     margin:0;
     padding:0
 }
+
 
 a{
     text-decoration:none;
@@ -200,7 +214,7 @@ body{
 #sec1{
   background-color:#1e8ffa;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
    
     background-size: 100% 100%;
 }
@@ -248,22 +262,27 @@ body{
 
 .bannersec{
   width:70vw;
-  height:90vh;
+  height:50vh;
   min-width:650px;
   align-self:center;
+  display:flex;
+  flex-direction: column;
+  margin-left:1vw;
 }
+
+
 #Banner {
   position: relative;
 }
 
 #Banner img {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   height: auto;
-  margin-top:190px;
+  margin-top:10.5vw;
 }
 
 .bannertitle{
