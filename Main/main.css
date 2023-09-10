@@ -33,7 +33,7 @@ html { font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   position: absolute;
   left: 85vh;
-  bottom: 60vh;
+  bottom: 40vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 3s infinite; /* 추가된 애니메이션 */
 }
@@ -45,7 +45,7 @@ html { font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   position: absolute;
   left: 41vh;
-  bottom: 60vh;
+  bottom: 65vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
 }
@@ -74,8 +74,8 @@ html { font-family: 'Inter', sans-serif; }
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: -5vh;
-  bottom: 30vh; /* 아래에서 20px 떨어진 위치 */
+  left: 20vh;
+  bottom: 40vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 2s infinite;
 }
@@ -87,7 +87,7 @@ html { font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   position: absolute;
   left: 137vh;
-  bottom: 10vh; /* 아래에서 20px 떨어진 위치 */
+  bottom: 65vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2.5s infinite; /* 추가된 애니메이션 */
 }
@@ -118,7 +118,7 @@ header >div>div>div {
 }
 
 #head{
-    padding: 30px 0 30px 0;
+    padding: 30px 30px 30px 0;
     font-size:1.5rem;
     background-color:#fff;
 }
@@ -185,7 +185,6 @@ header > div {
     border-radius:8px;
     box-sizing:border-box;
   }
-
 /* body */
 
 html{
@@ -261,8 +260,9 @@ body{
 }
 
 .bannersec{
+  padding-left:10vw;
   width:70vw;
-  height:50vh;
+  height:60vh;
   min-width:650px;
   align-self:center;
   display:flex;
@@ -273,6 +273,14 @@ body{
 
 #Banner {
   position: relative;
+}
+
+.mainbanner{
+  position: absolute;
+  bottom:13%;
+  left: 31%;
+  max-width: 100%;
+  height: auto;
 }
 
 #Banner img {
@@ -289,9 +297,9 @@ body{
     font-size:50px;
     font-weight:700;
     line-height:130%;
-    margin-top:8vh;
+    margin-top:5vh;
     color:#fff;
-    text-align:center;
+    text-align:left;
     font-family: 'Pretendard';
 }
 
@@ -300,7 +308,7 @@ body{
     line-height:160%;
     margin-top:3vh;
     color:#fff;
-    text-align:center;
+    text-align:left;
     font-family: 'Pretendard';
 }
 
@@ -308,7 +316,7 @@ body{
   font-size:2rem;
   line-height:160%;
   margin-top:0.2vh;
-  text-align:center;
+  text-align:left;
   color:#fff;
   font-family: 'Pretendard';
 }
@@ -320,12 +328,11 @@ body{
   align-items: center;
   text-align:center;
   justify-content: center; /* 추가된 속성 */
-  width: 18%;
+  width: 26%;
   height: 6vh;
   background-color: #fff;
   color:#1e8ffa;
   margin-top: 5vh;
-  margin-bottom: 8vh;
   border-radius: 10px;
   font-size: 2rem;
   font-weight: 500;
@@ -339,14 +346,14 @@ body{
 
 .button-wrapper {
   display: flex;
-  justify-content: space-around; 
+  
+  justify-content: left; 
 }
 
 
 
 #sec2{
     align-self:center;
-    padding-top:10vh;
     padding-bottom:8vh;
     
 }

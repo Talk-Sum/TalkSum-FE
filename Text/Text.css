@@ -322,7 +322,6 @@ a {
     transform: translate(-50%, -50%); /* 화면 중앙에 위치시키기 위해 translate 사용 */
     padding: 1.5rem;
     width: 42vw;
-    height:36vw;
     border-radius: 2rem;
 }
 
@@ -506,8 +505,8 @@ a {
   }
 
 .btn-open-popup {
-    width:8vw;
-    height:5vh;
+    width:9vw;
+    height:6vh;
     text-align: center;
     justify-content: center;
     line-height:1vh;
