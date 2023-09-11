@@ -33,7 +33,7 @@ html { font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   position: absolute;
   left: 85vh;
-  bottom: 40vh;
+  bottom: 50vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 3s infinite; /* 추가된 애니메이션 */
 }
@@ -44,8 +44,8 @@ html { font-family: 'Inter', sans-serif; }
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 41vh;
-  bottom: 65vh;
+  left: 69vh;
+  bottom: 63vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
 }
@@ -74,8 +74,8 @@ html { font-family: 'Inter', sans-serif; }
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 20vh;
-  bottom: 40vh; /* 아래에서 20px 떨어진 위치 */
+  left: 17vh;
+  bottom: 50vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 2s infinite;
 }
@@ -244,7 +244,7 @@ body{
 }
 
 .sect{
-    width:70vw;
+    width:80vw;
     height:140vh;
     min-width:650px;
     align-self:center;
@@ -258,7 +258,8 @@ body{
 }
 
 .bannersec{
-  width: 78vw;
+  width: 80vw;
+  height:60vh;
     min-width: 650px;
     align-self: center;
 }
@@ -285,10 +286,10 @@ body{
 }
 
 .bannertitle{
-  font-size: 4rem;
+  font-size: 5rem;
     font-weight: 700;
     line-height: 130%;
-    margin-top: 8vh;
+    margin-top: 14vh;
     font-family:'Pretendard';
     color:#fff;
 }
