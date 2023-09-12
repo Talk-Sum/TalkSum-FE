@@ -286,7 +286,7 @@ body{
 }
 
 .bannertitle{
-  font-size: 5rem;
+  font-size: 5.5rem;
     font-weight: 700;
     line-height: 130%;
     margin-top: 14vh;
@@ -295,18 +295,18 @@ body{
 }
 
 .bannertitle2{
-  font-size: 2rem;
+  font-size: 2.5rem;
     line-height: 160%;
     margin-top: 3vh;
     color:#fff;
-    font-family: 'Pretendard';
+    font-family: 'SUIT';
 }
 
 .bannertitle3{
-  font-size: 2rem;
-    line-height: 160%;
-    margin-top: 0.2vh;
-    font-family: 'Pretendard';
+  font-size: 2.5rem;
+    line-height: 120%;
+    
+    font-family: 'SUIT-Regular';
     color:#fff;
 }
 
