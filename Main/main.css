@@ -161,6 +161,7 @@ header > div {
   }
 
   .loginbtn{
+    font-size:2.2rem;
     text-align:center;
     width:8vw;
     border: 1px solid #1e8ffa;
@@ -174,6 +175,7 @@ header > div {
   }
 
   .Signupbtn{
+    font-size:2.2rem;
     text-align:center;
     width:8vw;
     border: 1px solid #c7cdd3;
@@ -361,7 +363,7 @@ body{
 
 .meet{
     font-weight: 700; 
-    font-size: 2.3vw; 
+    font-size: 3.5rem; 
     margin-top: 10vh;
     margin-bottom:10vh;
 }

@@ -15,7 +15,7 @@
         </div>
     <hr>
     <div class="note-list">
-        <div class="rows" onclick="goToPage('page1.html')">
+        <div class="rows">
             <img src="https://img.icons8.com/nolan/64/microphone.png" alt="마이크 아이콘" class="image">
             <div class="notename">
                 <div class="names">8/30 운영체제 13주차 대면 강의</div>
@@ -23,8 +23,8 @@
                     프레임을 할당하는 얘기와 페이지를 교체하는 얘기 두 가지가 소개되고 있어요. 내가 가지고 있는 물리적인...
                 </div>
             </div>
-            <div class="fold" onclick="toggleHeart(event)">
-                <img src="하트.png" alt="하트 아이콘">
+            <div class="fold">
+                <img src="하트.png" alt="하트 아이콘" onclick="toggleHeart(event)">
             </div>
             <div class="time">8.30 수 오후 8:41</div>
         </div>
@@ -39,7 +39,7 @@
                 우리가 이미 소프트웨어 테스팅에 관한 이야기는 했어요. 그래서 소프트웨어 테스팅 명세 검증할 때 했는데... 
             </div>
         </div>
-        <div class="fold"><img src="하트.png"></div>
+        <div class="fold"><img src="하트.png" alt="하트 아이콘" onclick="toggleHeart(event)"></div>
             <div class="time">8.12 금 오후 3:19</div>
         </div>
     </div>
@@ -106,9 +106,10 @@
 }
 
 function toggleHeart(event) {
-    event.stopPropagation();  // 이벤트 전파를 중단하여 상위 요소의 클릭 이벤트가 발생하지 않도록 함
+    event.stopPropagation(); // 이벤트 전파를 중단
+    event.preventDefault();  // 기본 동작을 중단
 
-    const heartImage = event.currentTarget.querySelector('img');
+    const heartImage = event.currentTarget;
 
     if (heartImage.src.includes("하트.png")) {
         heartImage.src = "꽉찬하트.png";
