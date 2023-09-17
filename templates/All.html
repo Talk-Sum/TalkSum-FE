@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="All.css">
+    <link rel="stylesheet" href="../static/css/All.css">
 </head>
 <body>
         <p class="allnote">전체 노트</p>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="fold">
-                <img src="하트.png" alt="하트 아이콘" onclick="toggleHeart(event)">
+                <img src="../static/image/emptyheart.png" alt="하트 아이콘" onclick="toggleHeart(event)">
             </div>
             <div class="time">8.30 수 오후 8:41</div>
         </div>
@@ -39,7 +39,7 @@
                 우리가 이미 소프트웨어 테스팅에 관한 이야기는 했어요. 그래서 소프트웨어 테스팅 명세 검증할 때 했는데... 
             </div>
         </div>
-        <div class="fold"><img src="하트.png" alt="하트 아이콘" onclick="toggleHeart(event)"></div>
+        <div class="fold"><img src="../static/image/emptyheart.png" alt="하트 아이콘" onclick="toggleHeart(event)"></div>
             <div class="time">8.12 금 오후 3:19</div>
         </div>
     </div>
@@ -53,7 +53,7 @@
                 저희가 저번까지는 주제를 대충 정했고 오늘은 역할 분담을 한번 해보면 좋을 것 같아요. 일단 프론트랑 백...
             </div>
         </div>
-        <div class="fold"><img src="하트.png"></div>
+        <div class="fold"><img src="../static/image/emptyheart.png"></div>
             <div class="time">7.16 수 오전 10:32</div>
         </div>
     </div>
@@ -67,7 +67,7 @@
                 '독해야 성공한다'는 말, 들어보셨나요? 대치동 유명 강사인 저는 수험생들에게 '독해져라'고 끊임없이 강조...
             </div>
         </div>
-        <div class="fold"><img src="하트.png"></div>
+        <div class="fold"><img src="../static/image/emptyheart.png"></div>
             <div class="time">7.3 화 오후 2:52</div>
         </div>
     </div>
@@ -81,7 +81,7 @@
                 점심 뭐드실래요? 점심 메뉴는 우리 정과장이 정하는걸로! 다같이...? 왜 제가 정합니까? 이러면은 우리가...
             </div>
         </div>
-        <div class="fold"><img src="하트.png"></div>
+        <div class="fold"><img src="../static/image/emptyheart.png"></div>
             <div class="time">5.25 토 오후 6:27</div>
         </div>
     </div>
@@ -95,7 +95,7 @@
                 강조되고 반복되는 소리는 강아지를 불안하게 해요! 네! 아니요! 이렇게는 좋은게 아니에요. 네 맞아요. 그런...
             </div>
         </div>
-        <div class="fold"><img src="하트.png"></div>
+        <div class="fold"><img src="../static/image/emptyheart.png"></div>
             <div class="time">4.21 화 오후 1:41</div>
         </div>
     </div>
@@ -111,10 +111,10 @@ function toggleHeart(event) {
 
     const heartImage = event.currentTarget;
 
-    if (heartImage.src.includes("하트.png")) {
-        heartImage.src = "꽉찬하트.png";
+    if (heartImage.src.includes("../static/image/emptyheart.png")) {
+        heartImage.src = "../static/image/fullheart.png";
     } else {
-        heartImage.src = "하트.png";
+        heartImage.src = "../static/image/emptyheart.png";
     }
 }
     </script>
