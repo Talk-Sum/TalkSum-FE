@@ -15,7 +15,7 @@
         </div>
     <hr>
     <div class="note-list">
-        <div class="rows">
+        <div class="rows" onclick="">
             <img src="https://img.icons8.com/nolan/64/microphone.png" alt="마이크 아이콘" class="image">
             <div class="notename">
                 <div class="names">8/30 운영체제 13주차 대면 강의</div>
@@ -109,9 +109,9 @@ function toggleHeart(event) {
     event.stopPropagation(); // 이벤트 전파를 중단
     event.preventDefault();  // 기본 동작을 중단
 
-    const heartImage = event.currentTarget;
+    const heartImage = event.target;
 
-    if (heartImage.src.includes("../static/image/emptyheart.png")) {
+    if (heartImage.src.endsWith("emptyheart.png")) {
         heartImage.src = "../static/image/fullheart.png";
     } else {
         heartImage.src = "../static/image/emptyheart.png";

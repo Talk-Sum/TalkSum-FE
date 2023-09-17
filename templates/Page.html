@@ -139,8 +139,9 @@
                     <div class="content-text">요약하기</div>
                     <div class="image">
                     <img src="https://img.icons8.com/ios/50/save--v1.png" alt="저장 아이콘" class="icon" id="saveIcon">
-                    <img src="https://img.icons8.com/ios-glyphs/30/share--v1.png" alt="share--v1" class="icon" id="shareLinkButton">
+                    
                     <img src="https://img.icons8.com/ios-glyphs/30/copy.png" alt="복사 아이콘" class="icon" id="copyIcon">
+                    
                 </div>
                 </div>
                 <hr>
@@ -178,15 +179,12 @@ document.getElementById('shareLinkButton').addEventListener('click', function() 
     // 현재 페이지의 URL을 가져옴
     const currentPageURL = window.location.href;
 
-    // URL을 클립보드에 복사
-    const textarea = document.createElement('textarea');
-    textarea.value = currentPageURL;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-
-    alert('링크가 클립보드에 복사되었습니다.');
+    // Clipboard API를 사용하여 URL을 클립보드에 복사
+    navigator.clipboard.writeText(currentPageURL).then(function() {
+        alert('링크가 클립보드에 복사되었습니다.');
+    }).catch(function(err) {
+        console.error('복사 실패:', err);
+    });
 });
 
     document.querySelector('.image img').addEventListener('click', function() {
