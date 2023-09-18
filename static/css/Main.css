@@ -29,23 +29,25 @@ html { font-family: 'Inter', sans-serif; }
 .bubble {
   width: 5vw;
   height: 10vh;
-  background-color: rgba(247, 231, 255, 0.5);
+  background: url(../image/main_icon.png);
   border-radius: 50%;
   position: absolute;
-  left: 85vh;
-  bottom: 50vh;
+  left: 90vh;
+  bottom: 40vh;
   transform: translateX(-50%);
+  background-size:cover;
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 3s infinite; /* 추가된 애니메이션 */
 }
 
 .bubble1 {
   width: 5vw;
   height: 10vh;
-  background-color: rgba(247, 231, 255, 0.5);
+  background: url(../image/main_icon.png);
+  background-size:cover;
   border-radius: 50%;
   position: absolute;
-  left: 69vh;
-  bottom: 63vh;
+  left: 83vh;
+  bottom: 70vh;
   transform: translateX(-50%);
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2s infinite; /* 추가된 애니메이션 */
 }
@@ -69,25 +71,29 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 .bubble2 {
+  background: url(../image/main_icon.png);
+  background-size:cover;
   width: 5vw;
   height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 17vh;
-  bottom: 50vh; /* 아래에서 20px 떨어진 위치 */
+  left: 5vh;
+  bottom: 35vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 2s infinite;
 }
 
 .bubble3 {
+  background: url(../image/main_icon.png);
+  background-size:cover;
   width: 5vw;
   height: 10vh;
   background-color: rgba(247, 231, 255, 0.5);
   border-radius: 50%;
   position: absolute;
-  left: 137vh;
-  bottom: 65vh; /* 아래에서 20px 떨어진 위치 */
+  left: 180vh;
+  bottom: 60vh; /* 아래에서 20px 떨어진 위치 */
   transform: translateX(-50%); /* 가로 방향 중앙 정렬 */
   animation: bubbleAnimation 1.5s infinite, bubbleDelay 2.5s infinite; /* 추가된 애니메이션 */
 }
@@ -211,7 +217,7 @@ body{
 }
 
 #sec1{
-  background-color:#1e8ffa;
+  background:url(../image/main_bg.jpeg);
     display:flex;
     flex-direction:column;
 }
