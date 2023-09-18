@@ -239,3 +239,14 @@ elements.forEach(element => {
 function goToPage(pageURL) {
 window.location.href = pageURL;
 }
+
+document.body.addEventListener('click', function(e) {
+  if (e.target.matches('.like img')) {
+      const likeImage = e.target;
+      if (likeImage.src.includes('heart.png')) {
+          likeImage.src = '../static/image/mdi_heart-outline.png';
+      } else {
+          likeImage.src = '../static/image/mdi_heart.png';
+      }
+  }
+});

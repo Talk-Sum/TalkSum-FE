@@ -58,6 +58,13 @@
     text-align: center;
 }
 
+.select{
+    flex: 1;
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+}
+
 .info {
     flex: 2;
     font-size: 0.9rem;
