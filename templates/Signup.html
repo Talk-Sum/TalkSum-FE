@@ -43,17 +43,16 @@
                     </div>
 
                     <div class="field input-field">
-                        <input type="PW" placeholder="비밀번호" class="password">
+                        <input type="password" placeholder="비밀번호" class="password" id="password1">
                     </div>
-
+                                        
                     <div class="field input-field">
-                        <input type="PWCF" placeholder="비밀번호 확인" class="password">
+                        <input type="password" placeholder="비밀번호 확인" class="passwordconfirm" id="password2">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
-
-                
+                    
                     <div class="field button-field">
-                        <button>회원가입</button>
+                        <button onclick="checkPasswords()">회원가입하기</button>
                     </div>
                 </form>
 
