@@ -103,6 +103,40 @@
 
     <script>
         AOS.init();
+
+        let isLoggedIn = false; // 초기 상태는 로그인되지 않은 상태로 가정
+
+function updateButtonState() {
+    const loginBtn = document.querySelector('.loginbtn');
+    
+    if (isLoggedIn) {
+        loginBtn.textContent = '로그아웃';
+        loginBtn.onclick = logoutFunction;
+    } else {
+        loginBtn.textContent = '로그인';
+        loginBtn.onclick = loginFunction;
+    }
+}
+
+function loginFunction() {
+    // 로그인 페이지로 이동
+    window.location.href = 'Login.html';
+    // 실제 로그인 로직이 수행된 후에는 isLoggedIn 값을 true로 설정해야 합니다.
+    // 예: API 호출 후 응답을 받아 로그인 성공 시
+    // isLoggedIn = true;
+    // updateButtonState();
+}
+
+function logoutFunction() {
+    // 로그아웃 로직 수행
+    // 예: 로그아웃 API 호출 후 성공 시
+    isLoggedIn = false;
+    updateButtonState();
+}
+
+// 초기 상태 설정
+updateButtonState();
+
     </script>
 </body>
 </html>

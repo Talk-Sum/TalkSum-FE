@@ -27,6 +27,11 @@
             <div class="fold">
                 <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
             </div>
+            <div class="checkbox">
+                <div class="check" onclick="toggleCheckbox(this)">
+                    <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+                </div>
+            </div>
             <div class="time">8.30 수 오후 8:41</div>
         </div>
     </div>
@@ -43,8 +48,14 @@
         <div class="fold">
             <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
         </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
+        </div>
             <div class="time">8.12 금 오후 3:19</div>
         </div>
+        
     </div>
     <hr>
     <div class="note-list">
@@ -58,6 +69,11 @@
         </div>
         <div class="fold">
             <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
+        </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
         </div>
             <div class="time">7.16 수 오전 10:32</div>
         </div>
@@ -75,6 +91,11 @@
         <div class="fold">
             <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
         </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
+        </div>
             <div class="time">7.3 화 오후 2:52</div>
         </div>
     </div>
@@ -89,7 +110,12 @@
             </div>
         </div>
         <div class="fold">
-            <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>    
+            <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
+        </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
         </div>
             <div class="time">5.25 토 오후 6:27</div>
         </div>
@@ -107,9 +133,49 @@
         <div class="fold">
             <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
         </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
+        </div>
             <div class="time">4.21 화 오후 1:41</div>
         </div>
     </div>
+    <hr>
+    <div class="note-list">
+        <div class="rows">
+            <img src="https://img.icons8.com/nolan/64/microphone.png" alt="마이크 아이콘" class="image">
+            <div class="notename">
+            <div class="names">4/21 세나개 유튜브</div>
+            <div class="note-content">
+                강조되고 반복되는 소리는 강아지를 불안하게 해요! 네! 아니요! 이렇게는 좋은게 아니에요. 네 맞아요. 그런...
+            </div>
+        </div>
+        <div class="fold">
+            <div class="like"><img src="../static/image/mdi_heart-outline.png" alt="하트 아이콘"></div>
+        </div>
+        <div class="checkbox">
+            <div class="check" onclick="toggleCheckbox(this)">
+                <img src="https://img.icons8.com/windows/32/unchecked-checkbox.png" alt="unchecked-checkbox">
+            </div>
+        </div>
+            <div class="time">4.21 화 오후 1:41</div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="pagination">
+        <button class="prev">⬅️</button>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <button class="next">➡️</button>
+    </div>
+    
 
     <script>
      function goToPage(url) {
@@ -126,6 +192,19 @@ document.body.addEventListener('click', function(e) {
         }
     }
 });
+
+function toggleCheckbox(element) {
+    var img = element.querySelector('img');
+
+    if (img.alt === 'unchecked-checkbox') {
+        img.src = 'https://img.icons8.com/windows/32/checked-checkbox--v1.png';
+        img.alt = 'checked-checkbox--v1';
+    } else {
+        img.src = 'https://img.icons8.com/small/32/unchecked-checkbox.png';
+        img.alt = 'unchecked-checkbox';
+    }
+}
+
 
 
 

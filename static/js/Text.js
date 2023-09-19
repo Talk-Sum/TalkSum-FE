@@ -250,3 +250,45 @@ document.body.addEventListener('click', function(e) {
       }
   }
 });
+
+function toggleCheckbox(element) {
+  var img = element.querySelector('img');
+
+  if (img.alt === 'unchecked-checkbox') {
+      img.src = 'https://img.icons8.com/windows/32/checked-checkbox--v1.png';
+      img.alt = 'checked-checkbox--v1';
+  } else {
+      img.src = 'https://img.icons8.com/windows/32/unchecked-checkbox.png';
+      img.alt = 'unchecked-checkbox';
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  let currentPage = 1;
+  const pages = document.querySelectorAll('.pagination span');
+
+  document.querySelector('.prev').addEventListener('click', function() {
+      if (currentPage > 1) {
+          currentPage--;
+          updatePagination();
+      }
+  });
+
+  document.querySelector('.next').addEventListener('click', function() {
+      if (currentPage < pages.length) {
+          currentPage++;
+          updatePagination();
+      }
+  });
+
+  function updatePagination() {
+      for (let page of pages) {
+          page.style.fontWeight = 'normal';
+      }
+      pages[currentPage - 1].style.fontWeight = 'bold';
+  }
+
+  updatePagination();
+});
+
+

@@ -413,6 +413,8 @@ a {
   }
   .upload-box .drag-file .image {
     width: 40px;
+    display:flex;
+    align-items: center;
   }
 
   .upload-box .drag-file .image2 {
@@ -503,6 +505,33 @@ a {
   .files .file .status .speed {
     margin-left: auto;
   }
+
+  .btn-open-popups {
+    width:9vw;
+    height:6vh;
+    text-align: center;
+    justify-content: center;
+    line-height:1vh;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 0.4rem;
+    padding: 0.75rem;
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+    border: 0.1rem solid #1e8ffa;
+    color: #1e8ffa;
+    background-color: #ffffff;
+}
+
+.buttonclass{
+    display:flex;
+    flex-direction: row;
+    gap:1vw;
+}
 
 .btn-open-popup {
     width:9vw;
