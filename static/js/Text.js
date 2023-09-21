@@ -291,4 +291,15 @@ document.addEventListener("DOMContentLoaded", function() {
   updatePagination();
 });
 
+// 노트이름검색하기
+$("#searchIcon").click(function() {
+  const query = $("#searchInput").val();
+  if (query.length === 0) return;  // 빈 문자열인 경우 리턴
+  
+  // 검색 시작
+  window.find(query);
+});
+
+
+
 
