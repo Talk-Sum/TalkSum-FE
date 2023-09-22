@@ -301,5 +301,37 @@ $("#searchIcon").click(function() {
 });
 
 
+window.onload = function() {
+  // 모든 note-content 요소들을 선택
+  var noteContents = document.querySelectorAll('.note-content');
+
+  // 각 note-content 요소에 대해서
+  noteContents.forEach(function(content) {
+      // 현재 요소의 텍스트 내용이 20자를 초과하면
+      if (content.textContent.trim().length > 75) {
+          // 20자까지만 잘라내고 "..."를 추가
+          content.textContent = content.textContent.trim().substr(0, 75) + '...';
+      }
+  });
+}
+
+window.onload = function() {
+  var noteNames = document.querySelectorAll('.notename');
+
+  noteNames.forEach(function(noteName) {
+      noteName.addEventListener('click', function() {
+          window.location.href = 'page.html';
+      });
+  });
+}
+
+
+
+
+
+
+
+
+
 
 
