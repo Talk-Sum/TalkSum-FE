@@ -831,6 +831,19 @@ hr {
     background-color: #f5f5f5;
 }
 
+* 로딩 모달
+
+.modal#loadingModal {
+    display: none; /* 기본적으로 숨김 */
+    /* ... 기존의 modal 스타일 ... */
+    z-index: 2000; /* 다른 모달 위에 표시되도록 z-index를 높게 설정 */
+}
+
+.loading-content {
+    text-align: center;
+    padding: 20px;
+}
+
 
 
 
