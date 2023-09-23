@@ -36,7 +36,7 @@
             <div class="leftheader">
                 <div class="content-text">음성 기록</div>
                 <div class="image">
-                <img src="https://img.icons8.com/ios/50/save--v1.png" alt="저장 아이콘" class="icon">
+                <img src="https://img.icons8.com/ios/50/save--v1.png" alt="저장 아이콘" class="icon" id="saveIcons">
                 <img src="https://img.icons8.com/fluency-systems-filled/48/search.png" alt="돋보기 아이콘" class="icon" id="searchIcon">
                 <img src="https://img.icons8.com/ios-glyphs/30/share--v1.png" alt="share--v1" class="icon" id="shareLinkButton">
             </div>
@@ -186,28 +186,47 @@ document.getElementById('shareLinkButton').addEventListener('click', function() 
     });
 });
 
-    document.querySelector('.image img').addEventListener('click', function() {
-  let contentToSave = '';
+document.getElementById('saveIcons').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
 
-  
-  const chats = document.querySelectorAll('.chat');
+    // _fonts 변수는 gulim.js에서 가져옴
+    const fontData = _fonts;
 
-  chats.forEach(chat => {
-      const username = chat.querySelector('.username').innerText;
-      const time = chat.querySelector('.time').innerText;
-      const content = chat.querySelector('.recordcontent').innerText;
-      
-      contentToSave += `${username} (${time}): ${content}\n\n`;
-  });
+    // 폰트를 VFS에 추가
+    pdf.addFileToVFS('gulim.ttf', fontData);
+    // 폰트를 jsPDF에 등록
+    pdf.addFont('gulim.ttf', 'gulim', 'normal');
+    // 폰트 설정
+    pdf.setFont('gulim');
+    pdf.setFontSize(12); // 여기서 폰트 크기를 조정
 
-  
-  const blob = new Blob([contentToSave], {type: 'text/plain'});
-  const link = document.createElement('a');
-  
-  link.href = URL.createObjectURL(blob);
-  link.download = 'chat_content.txt';
-  link.click();
+    // ".recordcontent" 클래스를 가진 모든 div를 가져옴
+    const contents = document.querySelectorAll('.recordcontent');
+    let fullContent = "";
+
+    contents.forEach(content => {
+        fullContent += content.innerText + "\n\n";
+    });
+
+    const lines = pdf.splitTextToSize(fullContent, 180); // 180mm를 최대 폭으로 설정
+    let yPosition = 10;
+
+    lines.forEach(line => {
+        if (yPosition > 280) {
+            pdf.addPage();
+            yPosition = 10;
+        }
+        pdf.text(line, 10, yPosition);
+        yPosition += 10;
+    });
+
+    // PDF 파일을 저장
+    pdf.save('recordcontent.pdf');
 });
+
+
+
 
 
 document.getElementById('searchIcon').addEventListener('click', function() {
@@ -238,6 +257,8 @@ document.getElementById('searchIcon').addEventListener('click', function() {
       alert('일치하는 내용이 없습니다.');
   }
 });
+
+
 
 
 document.getElementById('copyIcon').addEventListener('click', function() {
@@ -281,11 +302,11 @@ document.getElementById('saveIcon').addEventListener('click', function() {
     pdf.addFont('gulim.ttf', 'gulim', 'normal');
     // 폰트 설정
     pdf.setFont('gulim');
+    pdf.setFontSize(9);
 
-    // ".recordcontent" 클래스를 가진 모든 div를 가져옴
     const content = document.getElementById('summaryContent').innerText;
 
-    const lines = pdf.splitTextToSize(content, 180); // 180mm를 최대 폭으로 설정
+    const lines = pdf.splitTextToSize(content, 180); 
     let yPosition = 10;
 
     lines.forEach(line => {

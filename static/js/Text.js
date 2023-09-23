@@ -315,19 +315,7 @@ window.onload = function() {
   });
 }
 
-document.getElementById('saveIcon').addEventListener('click', function() {
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF();
 
-  const records = document.querySelectorAll('.recordcontent');
-
-  records.forEach((record, index) => {
-      const text = record.innerText;
-      pdf.text(text, 10, 10 + index * 10);
-  });
-
-  pdf.save('summary_content.pdf');
-});
 
 
 

@@ -24,6 +24,10 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
+html{
+  -webkit-text-size-adjust: none;
+}
+
 /*bubble*/
 
 .bubble {
