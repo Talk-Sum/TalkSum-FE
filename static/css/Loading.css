@@ -1,49 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f3f3f3;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    background-color: rgb(236, 236, 236);
+    justify-content: center;  /* 가로 중앙 정렬 */
+    display:flex;
+    align-items: center;      /* 세로 중앙 정렬 */
+    height: 100vh;            /* 브라우저 높이의 100% */  
 }
 
-.loading-content {
+
+td{
+    width: 14px;
+    height: 14px;
+}
+#gameField{
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}
+#scoreField{
+    float: right;
+    background-color: rgb(14,31,49);
+    margin-top: 1.9px;
+    margin-left: 3px;
+    width: 100px;
+}
+#score, #level{
+    font-size: 28px;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: white;
+    height: 30px;
 }
-
-.loading-spinner {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.sub{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(21,46,74);
+    padding: 10px;
+    margin: 0px;
 }
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+#about{
+    font-size: 20px;
 }
-
-p{
-    font-size:1.1vw;
-    text-align:center;
-    align-items: center;
+#about:hover{
+    color:rgb(199,82,82);
 }
-
-
-  /* 배경 그라데이션 */
-  body {
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
-  }
+#nextTable{
+    float: right;
+    margin: 0px;
+    position: absolute;
+    left: 402px;
+    top: 358px;
+}
+#help{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    height: 32px;
+    margin: 1px;
+}
+#comboField{
+    position: absolute;
+    left: 27px;
+    top: 320px;
+    width: 384px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+#pause, #gameover{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    visibility: hidden;
+    color: white;
+}
