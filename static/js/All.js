@@ -1,19 +1,3 @@
-/* EXPANDER MENU */
-const showMenu = (toggleId, navbarId, bodyId) => {
-  const toggle = document.getElementById(toggleId),
-  navbar = document.getElementById(navbarId),
-  bodypadding = document.getElementById(bodyId)
-
-  if( toggle && navbar ) {
-      toggle.addEventListener('click', ()=>{
-          navbar.classList.toggle('expander');
-
-          bodypadding.classList.toggle('body-pd')
-      })
-  }
-}
-
-showMenu('nav-toggle', 'navbar', 'body-pd')
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
@@ -313,6 +297,60 @@ window.onload = function() {
           content.textContent = content.textContent.trim().substr(0, 75) + '...';
       }
   });
+}
+
+function goToPage(url) {
+  window.location.href = url;
+}
+
+document.body.addEventListener('click', function(e) {
+  if (e.target.matches('.like img')) {
+      const likeImage = e.target;
+      if (likeImage.src.includes('heart.png')) {
+          likeImage.src = '../static/image/mdi_heart-outline.png';
+      } else {
+          likeImage.src = '../static/image/mdi_heart.png';
+      }
+  }
+});
+
+function toggleCheckbox(element) {
+  var img = element.querySelector('img');
+
+  if (img.alt === 'unchecked-checkbox') {
+      img.src = 'https://img.icons8.com/windows/32/checked-checkbox--v1.png';
+      img.alt = 'checked-checkbox--v1';
+  } else {
+      img.src = 'https://img.icons8.com/small/32/unchecked-checkbox.png';
+      img.alt = 'unchecked-checkbox';
+  }
+}
+
+function goToPage(url) {
+  window.location.href = url;
+}
+
+document.body.addEventListener('click', function(e) {
+  if (e.target.matches('.like img')) {
+      const likeImage = e.target;
+      if (likeImage.src.includes('heart.png')) {
+          likeImage.src = '../static/image/mdi_heart-outline.png';
+      } else {
+          likeImage.src = '../static/image/mdi_heart.png';
+      }
+  }
+});
+
+function toggleCheckbox(element) {
+  var img = element.querySelector('img');
+
+  if (img.alt === 'unchecked-checkbox') {
+      img.src = 'https://img.icons8.com/windows/32/checked-checkbox--v1.png';
+      img.alt = 'checked-checkbox--v1';
+  } else {
+      img.src = 'https://img.icons8.com/small/32/unchecked-checkbox.png';
+      img.alt = 'unchecked-checkbox';
+  }
 }
 
 

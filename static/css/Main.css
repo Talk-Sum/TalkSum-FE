@@ -24,17 +24,9 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-html{
-  -webkit-text-size-adjust: none;
-}
 
-@media all and (max-width: 768px){
-  *{
-    font-size:100%;
-    margin:0;
-    padding:0;
-  }
-}
+
+
 
 /*bubble*/
 
@@ -446,6 +438,46 @@ body{
     
     margin-top:3.5vw;
   }
+
+  @media all and (max-width: 768px){
+
+    .bannersec{
+      width:80%;
+      height:30vh;
+    }
+    .monitor {
+      display:none;
+  }
+
+    .bannertitle {
+        font-size: 3rem;
+        margin-top: 7vh;  
+        align-items: center;
+        text-align: center;  
+    }
+
+    .bannertitle2 {
+        font-size: 1.5rem;  
+        margin-top: 2vh;   
+        align-items: center;
+        text-align: center;   
+    }
+
+    .bannertitle3 {
+        font-size: 1.5rem;  
+        align-items: center;
+        text-align: center;  
+    }
+
+    #Banner > div{
+      align-items: center;
+      text-align: right;
+      width:100vw;
+    }
+    
+}
+
+
 
 
 

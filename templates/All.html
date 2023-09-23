@@ -2,11 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>톡썸 노트</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/css/All.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    
 </head>
-<body>
+
+    <body id="body-pd" class="body-pd">
+
+        <div class="containers">
+            <div id="divSearch">
+                <input id="searchInput" placeholder="노트 이름을 검색하세요.">
+                <img src="https://img.icons8.com/ios/50/search--v1.png" id="searchIcon" alt="Search Icon" class="image">
+              </div>
+
+            <div class="buttonclass">
+            <button class="btn-open-popups">
+                <ion-icon name="trash-outline" class="nav__icon"></ion-icon>
+                <span class="remove">노트 삭제하기</span>
+            </button>
+
+            <button class="btn-open-popup">
+                <ion-icon name="add-outline" class="nav__icon"></ion-icon>
+                <span class="new_note">새 노트 만들기</span>
+            </button>
+
+        </div>
+        </div>
+
+       
+
+        <div class="l-navbar expander" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <div class="nav__first">
+                            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                            <div class="nav__profile">
+                            <img width="36" height="36"  src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+                            <a href="#" class="nav__logo">이나경님</a>
+                        </div>
+                        </div>              
+                    </div>
+                    <hr>
+
+                    <div class="modal">
+                        <div class="modal_body">
+                            <h5 class="modal-title">새 노트 만들기</h5>
+                            
+                            <div class="modal-footer">
+                                
+                                <div class="notenameinput">
+                                    <div class="note-name">노트 제목</div>
+                                      <input type="text" class="input-name" placeholder="노트 제목을 입력하세요.">
+                                      
+                                  </div>
+                                  
+
+
+                                <div class="upload">파일 업로드하기</div>
+                                <div class="upload-box">
+                                    <div id="drop-file" class="drag-file">
+                                      <img src="https://img.icons8.com/ios/50/upload-to-cloud--v1.png" alt="파일 아이콘" class="image">
+                                      <p class="message">내 PC에서 음성파일을 첨부하거나 끌어오세요.<br>
+                                        음성파일 길이는 한 번에 최대 180분까지 가능해요.</p>
+                                        <div class="message2">
+                                            <img src="https://img.icons8.com/ios/50/globe--v1.png" alt="파일 아이콘" class="image2">
+                                            인식 언어&nbsp;
+                                            <select class="language-select">
+                                                <option value="한국어">한국어</option>
+                                                <option value="영어">영어</option>
+                                                <option value="스페인어">일본어</option>
+                                                <option value="중국어">중국어</option>
+                                            </select>
+                                        </div>
+
+                                      <label class="file-label" for="chooseFile">파일 첨부하기</label>
+                                    </div>
+                                  </div>
+
+                                <input class="file" id="chooseFile" type="file" multiple>
+                                <!-- <div id="files" class="files">
+                                    <div class="file">
+                                      <div class="thumbnail">
+                                        <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일타입 이미지" class="image">
+                                      </div>
+                                      <div class="details">
+                                        <header class="header">
+                                          <span class="name">Photo.png</span>
+                                          <span class="size">7.5 mb</span>
+                                        </header>
+                                        <div class="progress">
+                                          <div class="bar"></div>
+                                        </div>
+                                        <div class="status">
+                                          <span class="percent">37% done</span>
+                                          <span class="speed">90KB/sec</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> --> 
+
+                                  <div class="inputlink">
+                                  <div class="import">링크로 가져오기</div>
+
+                                  <div class="link-upload-container">
+                                    <input type="text" class="input-text" placeholder="유튜브 링크 URL을 여기에 입력하세요.">
+                                    <button class="upload-btn">Upload</button>
+                                </div>
+
+                                </div>
+
+                                <button class="btn btn-secondary btn-close-modal">X</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link" onclick="goToPage('All.html')">
+                            <ion-icon name="star-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">전체 노트</span>
+                        </a>
+                        <a href="" class="nav__link" onclick="goToPage('Important.html')">
+                            <ion-icon name="star-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">중요 노트</span>
+                        </a>
+    
+                        <a href="" class="nav__link" onclick="goToPage('Trash.html')">
+                            <ion-icon name="trash-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">휴지통</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
         <p class="allnote">전체 노트</p>
         <div class="row">
             <div class="name">이름</div>
@@ -177,37 +317,13 @@
         <span>7</span>
         <button class="next">➡️</button>
     </div>
+    <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script src="../static/js/All.js"></script>
+
+    </body>
+
+   
+    </html>
     
-
-    <script>
-     function goToPage(url) {
-    window.location.href = url;
-}
-
-document.body.addEventListener('click', function(e) {
-    if (e.target.matches('.like img')) {
-        const likeImage = e.target;
-        if (likeImage.src.includes('heart.png')) {
-            likeImage.src = '../static/image/mdi_heart-outline.png';
-        } else {
-            likeImage.src = '../static/image/mdi_heart.png';
-        }
-    }
-});
-
-function toggleCheckbox(element) {
-    var img = element.querySelector('img');
-
-    if (img.alt === 'unchecked-checkbox') {
-        img.src = 'https://img.icons8.com/windows/32/checked-checkbox--v1.png';
-        img.alt = 'checked-checkbox--v1';
-    } else {
-        img.src = 'https://img.icons8.com/small/32/unchecked-checkbox.png';
-        img.alt = 'unchecked-checkbox';
-    }
-}
-
-
-    </script>
-</body>
-</html>
