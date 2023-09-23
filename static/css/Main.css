@@ -28,6 +28,14 @@ html{
   -webkit-text-size-adjust: none;
 }
 
+@media all and (max-width: 768px){
+  *{
+    font-size:100%;
+    margin:0 auto;
+    padding:0;
+  }
+}
+
 /*bubble*/
 
 .bubble {
